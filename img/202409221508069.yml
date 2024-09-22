@@ -1,0 +1,514 @@
+# 默认语言为中文 zh-CN
+language: zh-CN
+
+# 设置网站图标（确保你的 favicon.ico 文件已放置于 source 文件夹下）
+# 当你的图片为 png 格式时，请确保其尺寸为 16*16、32*32、64*64、128*128、256*256 等符合规范的大小。
+# 现在的 Yun Logo 可以根据浏览器的亮暗主题，采用对应的相反色。
+# 譬如：亮色浏览器 LOGO 为黑色描边，暗色浏览器 LOGO 为白色描边。
+# 如果你想要为自己的图标添加该特性，你的图标须为 svg 文件，并为其添加对应样式。
+favicon: ./favicon.ico
+
+# 亮暗模式 可选 light | dark | auto | time
+mode: auto
+
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+# auto_excerpt:
+#   enable: true
+#   length: 150
+
+# 自定义主题的主色调。
+colors:
+  primary: "#6200ee"
+  # bg: "#F5F5F5" # 背景色
+  selection_bg: "#8e71c1" # 选取文字时的背景色
+  # 标签云中标签的起始色和结束色
+  # tag_start_color:
+  # tag_end_color:
+
+# 可以为你的标签指定色彩，默认色 #333
+tags:
+  动画: crimson
+  漫画: orange
+  Parcel: "#21374b"
+  学习: saddlebrown
+  MAD: crimson
+  教程: royalblue
+  笔记: dimgray
+  分享: "#0078e7"
+  随笔: mediumpurple
+  Blender: "#d04d2d"
+  Linux: "#2577b1"
+  中传: "#ccb44b"
+  部落: "#DD306A"
+  科幻: midnightblue
+  蚂蚁森林: "#54a892"
+
+# 可以为你的分类指定色彩，默认色 #333
+categories:
+  云游的小视频: "#FB7299"
+
+# 首页的垂直交错排列文字效果。默认开启。
+banner:
+  enable: true  # 是否开启
+  title: # 设置文字内容
+    - Wu
+    - Shuai
+    - の
+    - Blog 
+  border: true  #是否开启标语中字符的左右边框
+  cloud:  # 在首页下方显示流动的云
+    enable: true  # 是否开启
+    color: "white"  # 自定义色彩
+  go_down:  # 向下箭头按钮（点击翻页）
+    enable: true
+    icon: icon-arrow-down-s-line
+
+# 你可以如下配置来开启公告。 它将显示在所有文章卡片的最上方，标语的下方。
+notice:
+  enable: true
+  content: Thanks for playing my game.
+
+# 点击页面的烟花效果
+fireworks:
+  enable: true
+  colors:
+    - "102, 167, 221"
+    - "62, 131, 225"
+    - "33, 78, 194"
+
+# 首页卡片与文章内部图片的滚动浮现效果，可见官网，默认开启。
+scrollreveal:
+  enable: true
+  targets:  # 为元素选择器对应的元素添加滚动浮现效果
+    - .post-card
+    - .markdown-body img
+
+# 背景与标签
+sidebar:
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-1.jpg
+  bg_position: bottom 3rem center
+  tagcloud:   # 在侧边栏显示 Hexo 原生标签页
+    enable: true
+    amount: 20  # 显示的标签数量
+
+# 来使用彩色的词云替代原生的标签云。
+wordcloud:
+  enable: true
+  height: 350
+
+# 头像
+avatar:
+  enable: true # 是否显示头像
+  url: /images/avatar.jpg # 头像图片链接
+  rounded: true # 是否显示圆形
+  opacity: 1  # 透明度
+  mickey_mouse: false  # 默认关闭，开启后文章页面侧边栏的头像将向上移动（迪士尼警告）
+  status:
+    enable: true  # 是否显示状态
+    emoji: 😄 # emoji
+    message: 努力学习 # 内容
+
+# 打赏
+reward:
+  enable: true  # 开启打赏
+  icon:   # 打赏图标
+  comment: 我很可爱，请给我钱   # 在打赏按钮下显示你想说的话
+  url:  # 你的打赏链接（当你开启打赏链接时，将自动跳转你的外部链接而不是展开二维码）
+  methods:  # 数组，打赏方式
+    - name: 支付宝  # 打赏方式
+      path: /images/alipay-qrcode.jpg # 图片路径
+      color: "#00A3EE"  # 图标颜色
+      icon: icon-alipay-line  # 图标名称
+    - name: QQ 支付
+      path: /images/qqpay-qrcode.jpg
+      color: "#12B7F5"
+      icon: icon-qq-line
+    - name: 微信支付
+      path: /images/wechatpay-qrcode.jpg
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
+
+# 评论
+comment:
+  enable: true
+  candidates:
+    - waline
+    # - giscus
+  tips:
+    # - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/YunYouJun/yunyoujun.github.io/discussions" target="_blank">GitHub Discussions</a> 与我交流。
+
+waline:
+  enable: true
+  # serverURL: https://blog-api-wushuai2000.vercel.app/
+  # serverURL: https://blog-api-pird73snq-wushuai2000.vercel.app 
+  serverURL: https://blog-api-seven-vert.vercel.app/
+  visitor: false
+  comment: false
+  emoji:
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+  locale:
+    placeholder: 2506812280@qq.com
+  requiredMeta: ["nick"]
+github_issues:
+  enable: false
+github_discussions:
+  enable: false
+disqusjs:
+  enable: false
+  shortname: yunyoujun
+  apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
+# https://github.com/laymonage/giscus
+giscus:
+  enable: false
+  repo: YunYouJun/yunyoujun.github.io
+  repo-id:
+  category-id:
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
+
+# 页脚
+footer:
+  since: 2016
+  icon:
+    name: icon-cloud-line
+    animated: true
+    color: "#0078E7"
+    # url: https://sponsors.yunyoujun.cn
+    title: 赞助者们
+  beian:
+    enable: true
+    icp: 皖ICP备20002891号-2
+  # support:
+  #   enable: true
+  #   title: 又拍云
+  #   link: https://www.upyun.com
+  #   logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+  #   prefix: 本网站由
+  #   suffix: 提供 CDN 加速
+  # 自定义文本
+  # custom_text: <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7091873202&auto=1&height=430"></iframe>
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2022-02-12T00:00:00"
+
+# 引擎搜索
+engine_search:
+  enable: false
+
+# 本地搜索
+local_search:
+  enable: true
+
+# 不蒜子是一款轻量极简的网站计数器。
+busuanzi:
+  enable: true   # 不要与 Valine/Waline  的 visitor 同时启用。
+  site_uv: false #  是否显示站点用户访问量 Unique Visitor（_icon 为对应图标，以下同理）
+  site_uv_icon: icon-user-line
+  site_pv: true # 是否显示站点页面访问量 Page View
+  site_pv_icon: icon-eye-line
+  page_pv: true # 是否显示文章页面访问量 Page View
+  page_pv_icon: icon-eye-line
+
+# 基于 LeanCloud 的访问者统计，显示每篇文章的访问量。
+leancloud_visitors:
+  enable: false
+  app_id: fWGwyL3trN2cT42Bjj5yeSCz-gzGzoHsz # <your app id>
+  app_key: gTu3QmzDLJEx1os4Tvkdwr7e # <your app key>
+  # Required for apps from CN region
+  server_url: https://ccsu.top  # <your server url>
+
+# 字数统计
+wordcount:
+  enable: true
+  count: true
+  time: true
+
+# If you want to use it, you need config algolia appID in _config.yml!!!
+# https://github.com/oncletom/hexo-algolia
+# algolia_search:
+#   enable: true
+  # ...
+
+# 谷歌分析
+google_analytics:
+  enable: true
+  id: G-BMBD00SVV4
+
+# 谷歌广告
+google_adsense:
+  enable: false
+  client: ca-pub-2559786448841988
+
+# 编辑链接
+post_edit:
+  enable: false
+  url: https://github.com/wushuai2000/wushuai2000.github.io/tree/hexo/source/
+
+# 一键复制
+codeblock:  # 开启一键复制按钮
+  copy_btn: true
+
+# 版权设置
+creative_commons:
+  license: by-nc-sa   # 设置证书 (by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero)
+  post: true    # 在每篇文章末尾显示
+  language: deed.zh # 设置语言 (deed.zh | deed.en | deed.ja ｜ ...)
+  clipboard: false  # 是否在复制文章时，在剪贴板中追加版权信息（默认关闭）
+
+# 相册
+albums:
+  enable: true
+
+# 喜欢的女孩子
+girls:
+  enable: false
+
+# 在 sidebar 的最下方，添加醒目的图标链接。
+#相比社交链接，图标更大。你可以放置你的页面导航，友情链接等。
+pages:
+  - name: 我的小伙伴们
+    url: /links/
+    icon: icon-genderless-line
+    color: dodgerblue
+  # - name: 喜欢的女孩子
+  #   url: /girls/
+  #   icon: icon-women-line
+  #   color: hotpink
+  - name: 相册
+    url: /albums/
+    icon: icon-gallery-line
+    color: dodgerblue
+
+# 信息
+post_meta:
+  item_text: true  # 是否显示文字（如：发表于、更新于，若关闭则只显示图标与时间信息）
+  created_at: true  # 是否显示创建时间
+  updated_at: true  # 是否显示更新时间
+  categories: true  # 是否显示种类
+  tags: true        # 是否显示标签
+
+# 目录
+toc:
+  list_number: true   # 显示编号
+  max_depth: 6  # 生成 TOC 的最大深度
+  min_depth: 1  # 生成 TOC 的最小深度
+  placeholder: 很遗憾，咱没写啥目录   # 当目录不存在时，显示的话。
+  collapse: false   # 是否折叠目录（默认折叠，即隐藏次级目录，滚到到相关位置时才展开）
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+    # - path: https://www.yunyoujun.cn
+    #   icon: icon-cloud-line
+    #   count: 你猜
+
+  custom:
+    title: 留言板 # 可以覆盖默认标题
+    path: /about/ #comment
+    icon: icon-clipboard-line
+
+# 全局音乐播放器
+aplayer:
+  global: true
+  meting: true  # 是否开启 meting，决定是否引入 meting 资源。（注意与 widget 下的 meting 相区分）
+  # https://github.com/metowolf/MetingJS/tree/v1.2#option
+  widget: # 你可以将 widget.enable 设置为 true 来打开全局播放器。(aplayer.global 必须为 true）
+    enable: false
+    autoplay: false # 自动播放
+    mini: false # 启用迷你模式，
+    # theme: "#2980b9"
+    loop: all # 播放器循环 values: 'all', 'one', 'none'
+    order: list # values: 'list', 'random'
+    preload: auto # values: 'none', 'metadata', 'auto'
+    volume: 0.7 # 音量
+    mutex: true # 音频播放互斥
+    lrcType: 0
+    listFolded: false # 表示列表是否应首先折叠
+    listMaxHeight: 340px  # 列出最大高度
+    audio:  # audio: 给出了加载自定义音乐的默认参考配置
+      - name: 星宿计时
+        artist: 杉田朗/洛天依
+        url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/audio/star-timer.mp3
+        cover: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0.jpg
+    meting: # meting.enable: 此处的 meting 控制是否打开全局播放器挂件的 meting。
+      enable: true   # 打开时，将加载 option；关闭时，将使用自定义的 audio。
+      id: 308168565
+      server: netease
+      type: playlist
+pjax:
+  enable: false
+
+cursor:
+  enable: true
+
+baidu_push: true
+
+google_tagmanager:
+  enable: true
+  id: GTM-M9KWR9L
+
+# 随机在网站主页显示一句中二的话。（默认使用一言作为API）
+say:
+  enable: true  # 是否开启 Say
+  api: https://el-bot-api.vercel.app/api/words/young  # 远程 JSON API
+  hitokoto:
+    enable: true  # 是否开启 一言，开启一言时，将默认覆盖 say.api
+    api: https://v1.hitokoto.cn   # 你可以参考 语句接口｜一言 来根据你的想法使用一言 API
+    
+# 在每年的指定日期，开启灰色默哀模式。
+mourn:
+  enable: true
+  days:
+    - "4-4"
+
+# name: 链接名称
+# link: 链接
+# icon: 图标 Class
+# color: 图标颜色（前提是您引入的图标支持 SVG 自定义颜色）当前默认色彩采用官方图标的品牌主色。
+# 如果你想使用 QQ 跳转链接，你可能还需要到 QQ 推广 开通。
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: /atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  # - name: QQ 群 1050458482
+  #   # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
+  #   link: https://qm.qq.com/cgi-bin/qm/qr?k=kZJzggTTCf4SpvEQ8lXWoi5ZjhAx0ILZ&jump_from=webapi
+  #   icon: icon-qq-line
+  #   color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/wushuai2000
+    icon: icon-github-line
+    color: "#6e5494"
+  # - name: 微博
+  #   link: https://weibo.com/jizhideyunyoujun
+  #   icon: icon-weibo-line
+  #   color: "#E6162D"
+  # - name: 豆瓣
+  #   link: https://www.douban.com/people/yunyoujun/
+  #   icon: icon-douban-line
+  #   color: "#007722"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=549838440
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/huan-ji-91-3/
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/345844264
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  # - name: 微信公众号
+  #   link: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg
+  #   icon: icon-wechat-2-line
+  #   color: "#1AAD19"
+  # - name: Twitter
+  #   link: https://twitter.com/YunYouJun
+  #   icon: icon-twitter-line
+  #   color: "#1da1f2"
+  # - name: Telegram
+  #   link: https://t.me/yunyoujun_group
+  #   icon: icon-telegram-line
+  #   color: "#0088CC"
+  # - name: Telegram Channel
+  #   link: https://t.me/elpsycn
+  #   # icon: icon-telegram-fill
+  #   icon: icon-telegram-line
+  #   color: "#0088CC"
+  - name: E-Mail
+    link: mailto:2506812280@qq.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+  # - name: Travelling
+  #   link: https://travellings.link
+  #   icon: icon-train-line
+  #   color: black
+
+# 自定义展示的文章卡片透明度，默认为 0.8
+post_card:
+  opacity: 0.8
+
+# 为文章设置 type 属性，即可将其转为其他类型卡片，并跳转 url 设置的链接。
+# ---
+# title: xxx
+# type: bilibili
+# url: https://www.bilibili.com/video/av8153395/
+# ---
+types:
+  link:
+    color: blue
+    icon: icon-external-link-line
+  bilibili:
+    color: "#FF8EB3"
+    icon: icon-bilibili-line
+  douban:
+    color: "#007722"
+    icon: icon-douban-line
+  github:
+    color: black
+    icon: icon-github-line
+  netease-cloud-music:
+    color: "#C10D0C"
+    icon: icon-netease-cloud-music-line
+  notion:
+    color: black
+    icon: icon-notion
+  twitter:
+    color: "#1da1f2"
+    icon: icon-twitter-line
+  wechat:
+    color: "#1AAD19"
+    icon: icon-wechat-2-line
+  weibo:
+    color: "#E6162D"
+    icon: icon-weibo-line
+  yuque:
+    color: "#25b864"
+    icon: icon-yuque
+  zhihu:
+    color: "#0084FF"
+    icon: icon-zhihu-line
+  albums:
+    color: "#00CCFF"
+    icon: icon-gallery-line
+
+
+# Math Formulas Render Support
+math:
+  # Default (true) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in Front-matter.
+  # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
+  per_page: false
+
+  # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
+  mathjax:
+    enable: true
+    # See: https://mhchem.github.io/MathJax-mhchem/
+    mhchem: false
+
+vendors:
+  mathjax: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
+
+  
